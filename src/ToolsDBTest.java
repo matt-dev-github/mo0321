@@ -23,7 +23,6 @@ class ToolsDBTest {
 
     @Test
     void getToolFromCode() {
-        testDB.getToolFromCode("LADW");
         Tool actualLadder = testDB.getToolFromCode("LADW");
 
         Tool expectedLadder = new Tool(

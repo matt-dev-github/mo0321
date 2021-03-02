@@ -47,12 +47,19 @@ public class ToolsDB {
                 String toolCode = data[2];
 
                 Object[] salesInfo = toolInformation.get(toolType);
-                double dC = (double) salesInfo[0];
-                boolean wdC = (boolean) salesInfo[1];
-                boolean weC = (boolean) salesInfo[2];
-                boolean hC = (boolean) salesInfo[3];
+                double dailyCharge = (double) salesInfo[0];
+                boolean weekdayCharge = (boolean) salesInfo[1];
+                boolean weekendCharge = (boolean) salesInfo[2];
+                boolean holidayCharge = (boolean) salesInfo[3];
 
-                Tool toolToAdd = new Tool(toolType, toolBrand, toolCode, dC, wdC, weC, hC);
+                Tool toolToAdd = new Tool(
+                        toolType,
+                        toolBrand,
+                        toolCode,
+                        dailyCharge,
+                        weekdayCharge,
+                        weekendCharge,
+                        holidayCharge);
 
                 toolsAvailable.put(toolCode, toolToAdd);
             }
